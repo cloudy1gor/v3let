@@ -1,0 +1,29 @@
+.slider {
+  margin: 15px 0 45px;
+
+  &__list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item {
+    margin-right: 15px;
+    max-width: 400px;
+    width: auto;
+    overflow: hidden;
+  }
+
+  &__img {
+    // min-width: 100%;
+    max-height: 350px;
+    margin-right: 10px;
+    object-fit:contain;
+  }
+
+  &__pagination{
+    // display: flex;
+    // width: 6px;
+    // height: 6px;
+  }
+}

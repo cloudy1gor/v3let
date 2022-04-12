@@ -1,6 +1,7 @@
 .content {
+  margin-bottom: 25px;
   padding: 25px;
-  border-radius: 12px 12px 0 0;
+  border-radius: 12px;
   background-color: #fff;
 
   &__inner {
@@ -16,7 +17,7 @@
     flex-direction: column;
     padding: 12px;
     border-radius: 6px;
-    background-color: $bg;
+    background-image: $bg;
     transition: transform 0.4s, box-shadow 0.4s;
 
     &:first-child {
@@ -53,7 +54,7 @@
     &:hover {
       box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.4);
       // transform: scale(1.01);
-      transform: translateY(-6px);
+      transform: translateY(-4px);
     }
   }
 

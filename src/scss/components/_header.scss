@@ -18,7 +18,13 @@
 
   &__body {
     border-radius: 0 0 12px 12px;
+    padding: 20px 10px;
     background-color: #fff;
+
+    background-image: url("../images/plane.png");
+    background-position: 140px -56px;
+    background-repeat: no-repeat;
+    background-size: 260px;
   }
 
   &__inner {
@@ -26,19 +32,19 @@
     align-items: center;
     justify-content: space-between;
     height: 100px;
-
     padding: 20px;
   }
 
   &__link {
     color: $title;
+    cursor: pointer;
   }
 
   &__subtitle {
     max-width: 220px;
-    margin-left: 30px;
+    margin-left: 20px;
     font-size: 14px;
-    color: $txtg;
+    color: $title;
   }
 }
 
@@ -65,11 +71,13 @@
   }
 
   &__link {
+    display: block;
     font-size: 14px;
     color: $title;
-    transition: color 0.4s;
+    transition: color 0.4s, transform 0.4s;
 
     &:hover {
+      transform: translateY(-2px);
       color: $accent;
     }
     @extend %pt-700i;

@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 8px 0;
   height: 60px;
 }
 
@@ -9,10 +10,17 @@
   &__list {
     padding: 0 15px;
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  &__item:not(:last-child) {
-    margin-right: 15px;
+  &__item {
+    width: 32px;
+    height: 32px;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
   }
 
   &__icon {

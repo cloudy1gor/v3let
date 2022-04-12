@@ -1,8 +1,9 @@
 // Variables
-$accent: #00AA00;
+$accent: #125D98;
 $title: #243f4d;
 $txtg: #afafaf;
-$bg: #f1f3f5;
+$bg: linear-gradient(to top, #f3f9fb, #eaf6fb, #e2f3fb, #daf0fc, #d2edfd, #d1edfe, #d1ecfe, #d0ecff, #d5eeff, #dbf0ff, #e0f2ff, #e5f4ff);
+$bg2: radial-gradient(circle, #F3F9FB, #fcfcff, #f7faff, #f1f8ff, #eaf7ff, #dcf3ff, #cdeefe, #bdeafd, #a3e0fd, #87d7fd, #69ccfe, #42c2ff);
 
 %pt-400 {
   font-family: "PT Sans", sans-serif;
