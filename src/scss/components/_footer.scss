@@ -1,0 +1,11 @@
+.footer {
+  max-height: 60px;
+  background-color: $accent;
+
+  &__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+  }
+}
