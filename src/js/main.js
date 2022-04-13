@@ -1,19 +1,16 @@
 // import $ from "jquery";
-import Swiper from "swiper";
+import Swiper from "swiper/swiper-bundle";
 import AOS from "aos";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const swiper = new Swiper(".slider__list", {
-    slidesPerView: 3,
-    // spaceBetween: 30,
-    freeMode: true,
+  const swiper = new Swiper(".swiper", {
+
+    loop: false,
+    slidesPerView: 5,
+    spaceBetween: 30,
     grabCursor: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
     autoplay: {
-      delay: 4000,
+      delay: 5000,
       disableOnInteraction: false,
     },
     lazy: true,

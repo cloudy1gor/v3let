@@ -49,10 +49,12 @@
 
   &__title{
     margin-bottom: 15px;
+    @include txt($lc: 2);
   }
 
   &__text{
     flex-grow: 1;
+    margin-bottom: 14px;
     @include txt($lc: 11);
   }
 
