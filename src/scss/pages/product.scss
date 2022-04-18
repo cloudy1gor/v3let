@@ -1,0 +1,32 @@
+.product {
+  &__content {
+    margin: 45px 0;
+    padding: 25px 0;
+    border-radius: 12px 12px 0 0;
+    background-color: #fff;
+  }
+
+  &__title{
+    margin: 0 20px;
+    text-align: center;
+  }
+
+  &__text {
+    float: left;
+    border-radius: 12px;
+    margin: 15px 15px 15px 0;
+    padding: 25px;
+    min-width: 100%;
+    background-color: #fff;
+  }
+
+  &__img {
+    float: right;
+    object-fit: cover;
+    margin: 0 0 8px 15px;
+    min-width: 30vw;
+    max-width: 31vw;
+    min-height: 20vw;
+    max-height: 21vw;
+  }
+}
