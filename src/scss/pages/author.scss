@@ -1,0 +1,121 @@
+.author {
+  &__container {
+    max-width: 1300px;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #fff;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+    padding: 0 50px;
+  }
+
+  &__img {
+    object-fit: cover;
+    object-position: 20% 50%;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+  }
+
+  &__body {
+    padding-left: 20px;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+  }
+
+  &__year {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &__block {
+    border-radius: 0 20px 20px 0;
+    margin: 0;
+    background: #eaeaea;
+    color: $accent;
+    padding: 30px 30px 30px 80px;
+    position: relative;
+    font-family: "Lato", sans-serif;
+    background-image: $bg;
+
+    &:before {
+      content: "\1F676";
+      position: absolute;
+      z-index: 2;
+      left: 30px;
+      top: 15px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 80px;
+      color: #f5e9cf;
+      font-size: 50px;
+      background: rgba(188, 231, 250, 0.7);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 34px;
+      top: 19px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(242, 124, 176, 0.7);
+    }
+
+    p {
+      position: relative;
+      z-index: 3;
+      font-size: 18px;
+      letter-spacing: 0.05em;
+      line-height: 1.4;
+      margin: 0 0 16px;
+      color: $accent;
+      @include txt(3);
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    margin: 15px 20px;
+    list-style: decimal;
+  }
+
+  &__item {
+    min-width: 30%;
+    &::marker {
+      color: $accent;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    width: 320px;
+    font-size: 18px;
+    color: $title;
+    transition: color 0.3s, transform 0.4s;
+
+    &:hover {
+      transform: translateX(-2px);
+      color: $accent;
+    }
+    @include txt(3);
+    @extend %pt-700i;
+  }
+}
