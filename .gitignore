@@ -8,12 +8,12 @@ npm-debug.*
 *.fig
 *.psd
 *.png
-dist/
-package.json
-gulpfile.js
+# dist/
+# package.json
+# gulpfile.js
 .jshintrc
-.eslintrc.json
-.stylelintrc
+# .eslintrc.json
+# .stylelintrc
 package-lock.json
 desktop.ini
 
