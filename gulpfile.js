@@ -122,6 +122,51 @@ function scripts() {
     .pipe(browserSync.reload({ stream: true }));
 }
 
+function scriptsLibs() {
+  return src("src/js/product.js")
+    .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
+    .pipe(
+      webpack({
+        mode: "production",
+        output: {
+          filename: "product.min.js",
+        },
+        module: {
+          rules: [
+            {
+              test: /\.m?js$/,
+              exclude: /(node_modules|bower_components)/,
+              use: {
+                loader: "babel-loader",
+                options: {
+                  presets: [
+                    [
+                      "@babel/preset-env",
+                      {
+                        corejs: 3,
+                        useBuiltIns: "usage",
+                      },
+                    ],
+                  ],
+                },
+              },
+            },
+          ],
+        },
+      })
+    )
+    .pipe(dest("dist/js/"))
+    .pipe(
+      size({
+        gzip: true,
+        pretty: true,
+        showFiles: true,
+        showTotal: true,
+      })
+    )
+    .pipe(browserSync.reload({ stream: true }));
+}
+
 function styles() {
   return src("src/scss/style.scss")
     .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
@@ -346,7 +391,7 @@ function startwatch() {
 
   watch("src/scss/**/*.scss", styles);
 
-  watch(["src/js/**/*.js", "!src/js/*.min.js"], scripts);
+  watch(["src/js/**/*.js", "!src/js/*.min.js"], scripts, scriptsLibs);
 
   watch("src/images/**/*.+(jpg|jpeg|png|gif|svg|ico)", img);
 
@@ -363,6 +408,8 @@ exports.html = html;
 
 exports.scripts = scripts;
 
+exports.scriptsLibs = scriptsLibs;
+
 exports.styles = styles;
 
 exports.cleanimg = cleanimg;
@@ -371,4 +418,4 @@ exports.cleandist = cleandist;
 
 exports.cop = series(copy);
 
-exports.default = series(parallel(html, scripts, styles, images, fonts, browsersync, startwatch));
+exports.default = series(parallel(html, scripts, scriptsLibs, styles, images, fonts, browsersync, startwatch));

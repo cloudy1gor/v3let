@@ -1,39 +1,6 @@
-// import $ from "jquery";
-import Swiper, { Lazy, Autoplay } from "swiper";
 import AOS from "aos";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const swiper = new Swiper(".swiper", {
-    modules: [Lazy, Autoplay],
-    loop: false,
-    slidesPerView: 5,
-    spaceBetween: 30,
-    grabCursor: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    // Disable preloading of all images
-    preloadImages: false,
-    // Enable lazy loading
-    lazy: true,
-    // Responsive breakpoints
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      640: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 40,
-      },
-    },
-  });
-
   // липкая шапка
   let lastScroll = 0;
   const defaultOffset = 200;
@@ -83,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", trackScroll);
   btnUp.addEventListener("click", backToTop);
 
-  // анимации
   AOS.init({
     // Global settings:
     startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
@@ -96,11 +62,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
     offset: 190, // offset (in px) from the original trigger point
-    delay: 250, // values from 0 to 3000, with step 50ms
-    duration: 800, // values from 0 to 3000, with step 50ms
+    delay: 450, // values from 0 to 3000, with step 50ms
+    duration: 2500, // values from 0 to 3000, with step 50ms
     easing: "ease", // default easing for AOS animations
     once: false, // whether animation should happen only once - while scrolling down
-    mirror: false, // whether elements should animate out while scrolling past them
+    mirror: true, // whether elements should animate out while scrolling past them
     anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
   });
 });

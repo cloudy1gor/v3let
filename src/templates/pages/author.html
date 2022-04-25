@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Подробнее</title>
+    <title>Юрий Федоров</title>
     <meta name="robots" content="index, follow" />
     <meta name="keywords" content="ХВВАУЛ,Харьковское ВВАУЛ,Харьковское высшее военное авиационное училище лётчиков,выпускники 1974 года,выпуск 1974 года, лучший сайт авиации" />
     <meta name="description" content="Сайт выпускников ХВВАУЛ 1974 года выпуска, ХВВАУЛ-74, Взлёт.ру, v3let.ru, лучший сайт авиации" />
@@ -17,7 +17,7 @@
       <main class="main">
         <section class="author">
           <div class="container author__container">
-            <div class="author__top">
+            <div class="author__top" data-aos="slide-up" data-aos-duration="1000">
               <img src="images/author.jpg" alt="Федоров Юрий Игоревич" class="author__img" />
 
               <div class="author__body">
@@ -30,7 +30,7 @@
               </div>
             </div>
 
-            <ol class="author__content" reversed>
+            <ol class="author__content" reversed data-aos="fade-up" data-aos-duration="1200">
               <li class="author__item">
                 <a href="#" class="author__link"> Лётное сладострастие </a>
               </li>
@@ -670,9 +670,15 @@
             </ol>
           </div>
         </section>
+
+        <button class="up">
+          <svg class="up__icon">
+            <use xlink:href="images/sprite.svg#up"></use>
+          </svg>
+        </button>
       </main>
       @@include('templates/components/_footer.html')
     </div>
-    <script src="js/main.min.js"></script>
+    <script src="js/product.min.js"></script>
   </body>
 </html>

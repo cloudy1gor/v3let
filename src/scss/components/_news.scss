@@ -1,4 +1,6 @@
 .news {
+  border: 4px solid $accent;
+  border-bottom: 0px;
   padding: 25px 25px 55px 25px;
   border-radius: 12px 12px 0 0;
   background-color: #fff;
@@ -20,7 +22,7 @@
 
     &:hover {
       box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.4);
-      transform: translateY(-4px)!important;
+      transform: translateY(-4px) !important;
     }
   }
 
@@ -40,19 +42,19 @@
     cursor: pointer;
   }
 
-  &__info{
+  &__info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  &__title{
+  &__title {
     margin-bottom: 15px;
     @include txt($lc: 2);
   }
 
-  &__text{
+  &__text {
     flex-grow: 1;
     margin-bottom: 14px;
     @include txt($lc: 11);

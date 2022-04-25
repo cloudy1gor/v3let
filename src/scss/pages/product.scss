@@ -21,9 +21,9 @@
   }
 
   &__img {
-    float: right;
+    float: left;
     object-fit: cover;
-    margin: 0 0 8px 15px;
+    margin: 0 15px 8px 0;
     min-width: 30vw;
     max-width: 31vw;
     min-height: 20vw;

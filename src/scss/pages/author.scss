@@ -1,5 +1,8 @@
 .author {
+  padding: 0 15px;
+
   &__container {
+    border: 4px solid $accent;
     max-width: 1300px;
     margin: 25px auto;
     padding: 25px;
