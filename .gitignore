@@ -11,7 +11,7 @@ npm-debug.*
 # dist/
 # package.json
 # gulpfile.js
-.jshintrc
+# .jshintrc
 # .eslintrc.json
 # .stylelintrc
 package-lock.json
