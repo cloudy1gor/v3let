@@ -22,6 +22,10 @@
     align-items: center;
     min-height: 60px;
     background-color: $accent;
+    @include mq("768"){
+      margin-left: -10px;
+      padding-right: 24px;
+    }
   }
 
   &-top__inner {
@@ -35,6 +39,17 @@
     min-width: 96%;
     text-align: center;
     color: #ececec;
+    @include mq("1024") {
+      @include txt(5);
+    }
+    @include mq("768") {
+      font-size: 12px;
+      padding: 0;
+      // display:contents;
+    }
+    @include mq("480") {
+      max-height: 90px;
+    }
   }
 
   &__body {
@@ -79,20 +94,60 @@
 
   &__list {
     display: flex;
+    transition: transform 0.3s;
+    transform: translateX(200%);
+    @include mq("1024") {
+      position: absolute;
+      // left: 0;
+      right: 0;
+      top: 84px;
+      flex-direction: column;
+      border-radius: 10px;
+      min-width: 240px;
+      // min-height: 110vh;
+      padding: 10px 10px 10px 26px;
+      background-color: $accent;
+
+      &.menu__list--active {
+        transform: translateX(0%);
+      }
+    }
   }
 
-  &__item:not(:last-child) {
-    margin-right: 18px;
+  &__item {
+    @include mq("1024") {
+      border-radius: 4px;
+      padding: 4px;
+      background-color: #fff;
+    }
+  }
+
+  &__item:first-child {
+    margin-top: 50px;
+  }
+
+  &__item:last-child {
+    @include mq("1024") {
+      margin-bottom: 40px;
+      margin-right: 18px;
+    }
   }
 
   &__item:not(:last-child) {
     position: relative;
+    margin-right: 18px;
     color: $txtg;
+    @include mq("1024") {
+      margin-bottom: 10px;
+    }
     &::after {
       @include pseudo($content: "/");
       top: 0;
       right: -12px;
       font-size: 15px;
+      @include mq("1024") {
+        content: "";
+      }
     }
   }
 
@@ -101,11 +156,33 @@
     font-size: 14px;
     color: $title;
     transition: color 0.4s, transform 0.4s;
+    @include mq("1024") {
+      color: #000;
+    }
 
     &:hover {
       transform: translateY(-2px);
       color: $accent;
     }
     @extend %pt-700i;
+  }
+
+  &__btn {
+    position: absolute;
+    right: 30px;
+    top: 100px;
+    z-index: 3;
+    display: none;
+    max-width: 30px;
+    max-height: 30px;
+    cursor: pointer;
+    @include mq("1024") {
+      display: block;
+    }
+  }
+
+  &__icon {
+    width: 28px;
+    height: 28px;
   }
 }

@@ -7,7 +7,6 @@ node_modules/
 npm-debug.*
 *.fig
 *.psd
-# *.png
 # dist/
 # package.json
 # gulpfile.js
@@ -15,5 +14,6 @@ npm-debug.*
 # .eslintrc.json
 # .stylelintrc
 package-lock.json
+yarn.lock
 desktop.ini
 
