@@ -17,6 +17,8 @@
       <main class="main">
         <section class="author">
           <div class="container author__container">
+            <h2 class="author__title title">Об авторе</h2>
+
             <div class="author__top" data-aos="slide-up" data-aos-duration="1000">
               <img src="images/author.jpg" alt="Федоров Юрий Игоревич" class="author__img" />
 
@@ -25,10 +27,12 @@
                 <span class="author__year">(1953 года рождения)</span>
 
                 <blockquote class="author__block" cite="http://developer.mozilla.org">
-                  <p>Ну и что ты понял? Двоечник...Ну и что ты понял? Двоечник...Ну и что ты понял? Двоечник...</p>
+                  <p>Лётчики – это люди, которые всю свою жизнь потом не могут отвыкнуть от своей молодости.</p>
                 </blockquote>
               </div>
             </div>
+
+            <h2 class="author__title title">Произведения</h2>
 
             <ol class="author__content" reversed data-aos="fade-up" data-aos-duration="1200">
               <li class="author__item">
@@ -677,8 +681,7 @@
           </svg>
         </button>
       </main>
-      @@include('templates/components/_modal.html')
-      @@include('templates/components/_footer.html')
+      @@include('templates/components/_modal.html') @@include('templates/components/_footer.html')
     </div>
     <script src="js/product.min.js"></script>
   </body>

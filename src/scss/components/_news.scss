@@ -1,9 +1,13 @@
 .news {
   border: 4px solid $accent;
   border-bottom: 0px;
-  padding: 25px 25px 105px 25px;
+  padding: 25px 25px 45px 25px;
   border-radius: 12px 12px 0 0;
   background-color: #fff;
+
+  &__list{
+    margin-bottom: 40px;
+  }
 
   &__item {
     &:not(:last-child) {
@@ -32,10 +36,12 @@
   &__image {
     margin-right: 20px;
     max-width: 40%;
+    min-width: 39%;
     max-height: 100%;
     object-fit: cover;
     @include mq("768") {
       min-width: 100%;
+      margin-bottom: 16px;
     }
   }
 
@@ -84,6 +90,26 @@
       width: 8px;
       height: 8px;
       background-color: #009688;
+    }
+  }
+
+  &__btn{
+    border: 2px solid $accent;
+    border-radius: 8px;
+    margin: 0 auto;
+    width: 180px;
+    height: 40px;
+    background-color: #fff;
+    transition: background-color 0.4s, transform 0.4s;
+    cursor: pointer;
+    @include txt(1);
+
+    &:hover{
+      transform: scale(1.04);
+      background-color: $accent;
+      span {
+        color: #fff;
+      }
     }
   }
 }

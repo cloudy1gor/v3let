@@ -38,6 +38,7 @@ body {
 
 .title {
   position: relative;
+  border-bottom: 1px solid #000;
   margin-bottom: 20px;
   text-align: center;
   @include txt($lc: 2);

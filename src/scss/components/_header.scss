@@ -22,7 +22,7 @@
     align-items: center;
     min-height: 60px;
     background-color: $accent;
-    @include mq("768"){
+    @include mq("768") {
       margin-left: -10px;
       padding-right: 24px;
     }
@@ -95,7 +95,6 @@
   &__list {
     display: flex;
     transition: transform 0.3s;
-    transform: translateX(200%);
     @include mq("1024") {
       position: absolute;
       // left: 0;
@@ -106,6 +105,7 @@
       min-width: 240px;
       // min-height: 110vh;
       padding: 10px 10px 10px 26px;
+      transform: translateX(200%);
       background-color: $accent;
 
       &.menu__list--active {
@@ -123,7 +123,9 @@
   }
 
   &__item:first-child {
-    margin-top: 50px;
+    @include mq("1024") {
+      margin-top: 50px;
+    }
   }
 
   &__item:last-child {
@@ -173,11 +175,19 @@
     top: 100px;
     z-index: 3;
     display: none;
-    max-width: 30px;
+    border: 3px solid $accent;
+    border-radius: 6px;
     max-height: 30px;
     cursor: pointer;
+
+    & span {
+      font-size: 14px;
+      margin-right: 2px;
+      @extend %pt-700;
+    }
     @include mq("1024") {
-      display: block;
+      display: flex;
+      align-items: center;
     }
   }
 

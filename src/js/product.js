@@ -23,6 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
     lastScroll = scrollPosition();
   });
 
+  // бургер меню
+  const menuNav = document.querySelector(".menu__list");
+  const menuBurger = document.querySelector(".menu__btn");
+
+  menuBurger.addEventListener("click", () => {
+    menuNav.classList.toggle("menu__list--active");
+  });
+
   // кнопка наверх
   const btnUp = document.querySelector(".up");
 

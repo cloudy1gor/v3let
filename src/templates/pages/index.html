@@ -7,7 +7,7 @@
     <meta name="description" content="Сайт выпускников ХВВАУЛ 1974 года выпуска, ХВВАУЛ-74, Взлёт.ру, v3let.ru, лучший сайт авиации" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico" />
 
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
@@ -154,6 +154,10 @@
                 <time class="content__date">11.04.2022</time>
               </article>
             </div>
+
+            <button class="news__btn btn">
+              <span>Показать все новости</span>
+            </button>
           </section>
 
           <!-- Слайдер. -->
@@ -319,6 +323,10 @@
                   </article>
                 </li>
               </ul>
+
+              <button class="news__btn btn">
+                <span>Показать все новости</span>
+              </button>
             </div>
           </section>
 
@@ -330,8 +338,7 @@
         </div>
       </main>
 
-      @@include('templates/components/_modal.html')
-      @@include('templates/components/_footer.html')
+      @@include('templates/components/_modal.html') @@include('templates/components/_footer.html')
     </div>
     <script src="js/main.min.js"></script>
   </body>
