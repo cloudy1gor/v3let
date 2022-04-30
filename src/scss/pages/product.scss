@@ -1,6 +1,6 @@
 .product {
   &__content {
-    margin: 45px 0;
+    // margin: 45px 0;
     padding: 25px 0;
     border-radius: 12px 12px 0 0;
     background-color: #fff;
@@ -24,9 +24,15 @@
     float: left;
     object-fit: cover;
     margin: 0 15px 8px 0;
-    min-width: 30vw;
-    max-width: 31vw;
-    min-height: 20vw;
-    max-height: 21vw;
+    min-width: 49vw;
+    max-width: 50vw;
+    min-height: 35vw;
+    max-height: 36vw;
+    @include mq("768"){
+      float: none;
+      margin-bottom: 16px;
+      min-width: 100%;
+      max-height: 50%;
+    }
   }
 }

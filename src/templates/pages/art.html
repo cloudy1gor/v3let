@@ -15,14 +15,16 @@
     <div class="wrapper">
       @@loop('templates/components/_header.html',[{ "title":"header title" }])
       <main class="main">
+        <!-- Поиск и ссылки для связи. -->
+        @@include('templates/components/_bar.html')
+
         <button class="up">
           <svg class="up__icon">
             <use xlink:href="images/sprite.svg#up"></use>
           </svg>
         </button>
       </main>
-      @@include('templates/components/_modal.html')
-      @@include('templates/components/_footer.html')
+      @@include('templates/components/_modal.html') @@include('templates/components/_footer.html')
     </div>
     <script src="js/product.min.js"></script>
   </body>

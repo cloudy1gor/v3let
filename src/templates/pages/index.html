@@ -18,50 +18,11 @@
       <main class="main" data-aos="slide-up">
         <div class="container">
           <!-- Поиск и ссылки для связи. -->
-          <div class="bar">
-            <dvi class="social">
-              <!-- <span class="social_text">Свяжитесь со мной:</span> -->
-              <ul class="social__list">
-                <li class="social__item">
-                  <a href="./product.html" target="_blank" class="social__link">
-                    <svg class="social__icon">
-                      <use xlink:href="images/sprite.svg#odnok"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a href="./product.html" target="_blank" class="social__link">
-                    <svg class="social__icon">
-                      <use xlink:href="images/sprite.svg#telegram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a href="./product.html" target="_blank" class="social__link">
-                    <svg class="social__icon">
-                      <use xlink:href="images/sprite.svg#email"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </dvi>
-
-            <div class="search">
-              <form action="#" class="search__form">
-                <input type="text" class="search__input" placeholder="Поиск" />
-
-                <button class="search__btn">
-                  <svg class="search__icon">
-                    <use xlink:href="images/sprite.svg#search"></use>
-                  </svg>
-                </button>
-              </form>
-            </div>
-          </div>
+          @@loop('templates/components/_bar.html')
 
           <!-- Истории. -->
           <section class="content">
-            <h2 class="title">Самое важное!</h2>
+            <h2 class="title">Самое важное</h2>
 
             <div class="content__inner">
               <article class="content__item">
@@ -163,7 +124,7 @@
           <!-- Слайдер. -->
           <section class="slider" id="slide" data-aos="fade-up">
             <div class="contaner">
-              <h2 class="title">Наши выпускники.</h2>
+              <h2 class="title">Наши выпускники</h2>
             </div>
             <div class="slider__container swiper">
               <ul class="slider__list swiper-wrapper">
@@ -215,7 +176,7 @@
           <!-- Новостные каточки -->
           <section class="news" data-aos="fade-up">
             <div class="container">
-              <h2 class="title" data-aos="fade-up">Свежие статьи.</h2>
+              <h2 class="title" data-aos="fade-up">Свежие статьи</h2>
 
               <ul class="news__list">
                 <li class="news__item">
