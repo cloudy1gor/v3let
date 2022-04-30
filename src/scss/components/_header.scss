@@ -178,7 +178,12 @@
     border: 3px solid $accent;
     border-radius: 6px;
     max-height: 30px;
+    transition: transform 0.3s;
     cursor: pointer;
+
+    &:hover{
+      transform: scale(0.98);
+    }
 
     & span {
       font-size: 14px;

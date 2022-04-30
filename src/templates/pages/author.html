@@ -15,6 +15,9 @@
     <div class="wrapper">
       @@loop('templates/components/_header.html',[{ "title":"header title" }])
       <main class="main">
+        <!-- Поиск и ссылки для связи. -->
+        @@include('templates/components/_bar.html')
+
         <section class="author">
           <div class="container author__container">
             <h2 class="author__title title">Об авторе</h2>
