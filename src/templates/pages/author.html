@@ -16,7 +16,7 @@
       @@loop('templates/components/_header.html',[{ "title":"header title" }])
       <main class="main">
         <!-- Поиск и ссылки для связи. -->
-        @@include('templates/components/_bar.html')
+        <div class="container">@@include('templates/components/_bar.html')</div>
 
         <section class="author">
           <div class="container author__container">
@@ -31,7 +31,17 @@
 
                 <blockquote class="author__block" cite="http://developer.mozilla.org">
                   <p>Лётчики – это люди, которые всю свою жизнь потом не могут отвыкнуть от своей молодости.</p>
+                  <cite>Из записных книжек курсанта</cite>
                 </blockquote>
+
+                <div class="author__social">
+                  <a href="https://ok.ru/profile/529378520930" target="_blank" class="author__social-link">
+                    <svg class="social__icon">
+                      <use xlink:href="images/sprite.svg#odnok"></use>
+                    </svg>
+                    <span>Профиль в Оноклассниках</span>
+                  </a>
+                </div>
               </div>
             </div>
 

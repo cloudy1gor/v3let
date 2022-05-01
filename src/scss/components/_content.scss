@@ -39,11 +39,20 @@
 
     &:first-child .content__img-container {
       margin-bottom: 22px;
+      @include mq("1024") {
+        margin-bottom: 2px;
+      }
     }
 
     &:first-child .content__title {
       margin-bottom: 15px;
       font-size: 24px;
+      text-align: center;
+      @include mq("1024") {
+        text-align: left;
+        margin-bottom: 2px;
+        font-size: 18px;
+      }
     }
 
     &:first-child .content__img {
@@ -57,7 +66,6 @@
     &:first-child .content__text {
       margin-bottom: 26px;
       font-size: 16px;
-
     }
 
     &:hover {
@@ -89,6 +97,7 @@
 
   &__title {
     font-size: 18px;
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0.8);
     @include txt($lc: 2);
     @include mq("1024") {
       font-size: 16px;
@@ -99,6 +108,7 @@
     flex-grow: 1;
     margin-bottom: 10px;
     font-size: 12px;
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0.8);
     @include txt($lc: 2);
   }
 

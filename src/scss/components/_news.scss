@@ -5,7 +5,7 @@
   border-radius: 12px 12px 0 0;
   background-color: #fff;
 
-  &__list{
+  &__list {
     margin-bottom: 40px;
   }
 
@@ -63,12 +63,14 @@
 
   &__title {
     margin-bottom: 15px;
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0.8);
     @include txt($lc: 2);
   }
 
   &__text {
     flex-grow: 1;
     margin-bottom: 14px;
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0.8);
     @include txt($lc: 11);
   }
 
@@ -93,7 +95,7 @@
     }
   }
 
-  &__btn{
+  &__btn {
     border: 2px solid $accent;
     border-radius: 8px;
     margin: 0 auto;
@@ -104,7 +106,7 @@
     cursor: pointer;
     @include txt(1);
 
-    &:hover{
+    &:hover {
       transform: scale(1.04);
       background-color: $accent;
       span {
