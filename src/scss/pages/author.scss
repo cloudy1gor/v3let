@@ -3,10 +3,11 @@
 
   &__container {
     border: 4px solid $accent;
+    border-bottom: 0;
     max-width: 1300px;
-    margin: 0 auto 48px;
+    margin: 0 auto;
     padding: 25px;
-    border-radius: 12px;
+    border-radius: 12px 12px 0 0;
     background-color: #fff;
   }
 
@@ -14,7 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin: 50px 0;
+    margin: 70px 0;
     padding: 0 50px;
     @include mq("1024") {
       padding: 0 20px;
@@ -45,13 +46,18 @@
       margin-bottom: 14px;
     }
     @include mq("480") {
-      height: 260px;
-      width: 260px;
+      min-height: 100%;
+      min-width: 50%;
+      max-height: 260px;
+      max-width: 260px;
     }
   }
 
   &__body {
     padding-left: 20px;
+    @include mq("768"){
+      padding-left: 0;
+    }
   }
 
   &__name {
@@ -168,7 +174,7 @@
     border-radius: 8px;
     list-style: decimal;
     padding: 50px 0 30px 12%;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     @include mq("768") {
       padding: 20px 0 20px 20%;
     }

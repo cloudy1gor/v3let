@@ -65,31 +65,41 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // кнопка наверх
-  const btnUp = document.querySelector(".up");
-
-  function trackScroll() {
-    const scrolled = window.pageYOffset;
-    const coords = document.documentElement.clientHeight;
-
-    if (scrolled > coords) {
-      btnUp.style.display = "block";
-      btnUp.classList.add("up--animated");
-    }
-    if (scrolled < coords) {
-      btnUp.style.display = "none";
-      btnUp.classList.remove("up--animated");
-    }
+  function scrollTo(to, duration = 1000) {
+    const element = document.scrollingElement || document.documentElement,
+      start = element.scrollTop,
+      change = to - start,
+      startDate = +new Date(),
+      // t = current time
+      // b = start value
+      // c = change in value
+      // d = duration
+      easeInOutQuad = function (t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return (c / 2) * t * t + b;
+        t--;
+        return (-c / 2) * (t * (t - 2) - 1) + b;
+      },
+      animateScroll = function () {
+        const currentDate = +new Date();
+        const currentTime = currentDate - startDate;
+        element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
+        if (currentTime < duration) {
+          requestAnimationFrame(animateScroll);
+        } else {
+          element.scrollTop = to;
+        }
+      };
+    animateScroll();
   }
 
-  function backToTop() {
-    if (window.pageYOffset > 0) {
-      window.scrollBy(0, -80);
-      setTimeout(backToTop, 0);
-    }
-  }
-
-  window.addEventListener("scroll", trackScroll);
-  btnUp.addEventListener("click", backToTop);
+  let btn = document.querySelector(".up");
+  // При клике прокручиваем на самый верх
+  btn.onclick = function (click) {
+    click.preventDefault();
+    // Вызываем функцию, первый аргумент - отступ, второй - скорость скролла, чем больше значение, тем медленнее скорость прокрутки
+    scrollTo(0, 400);
+  };
 
   // модальное окно
   const modalTrigger = document.querySelectorAll("[data-modal]"),

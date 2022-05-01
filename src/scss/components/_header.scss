@@ -11,7 +11,7 @@
   }
 
   &.color {
-    .header__body {
+    .header__inner {
       box-shadow: 0px 10px 8px 0px rgba(34, 60, 80, 0.4);
       border-top: 0px;
     }
@@ -52,23 +52,27 @@
     }
   }
 
-  &__body {
-    border: 4px solid $accent;
-    border-radius: 0 0 12px 12px;
-    padding: 20px 10px;
-    background-color: #fff;
-    background-image: url("../images/plane.png");
-    background-position: 132px -56px;
-    background-repeat: no-repeat;
-    background-size: 210px;
-  }
-
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 50px;
-    padding: 20px;
+    min-height: 80px;
+    max-height: 80px;
+    border: 4px solid $accent;
+    border-radius: 0 0 12px 12px;
+    border-top: 0;
+    padding: 4px 20px;
+    background-color: #fff;
+    background-image: url("../images/plane.png");
+    background-position: 122px -50px;
+    background-repeat: no-repeat;
+    background-size: 180px;
+  }
+
+  &__about {
+    @include mq("1024") {
+      min-width: 210px;
+    }
   }
 
   &__link {
@@ -85,26 +89,34 @@
     max-width: 220px;
     margin-left: 20px;
     font-size: 14px;
+    text-shadow: 1px 1px 3px #fff;
     color: $title;
   }
 }
 
 .menu {
-  margin-top: 50px;
+  margin-top: 44px;
+  @include mq("1024") {
+    margin-top: 0;
+  }
 
   &__list {
     display: flex;
     transition: transform 0.3s;
     @include mq("1024") {
+      margin-left: auto;
+      flex-wrap: wrap;
+      max-width: 60%;
+    }
+
+    @include mq("768") {
       position: absolute;
-      // left: 0;
       right: 0;
       top: 84px;
       flex-direction: column;
       border-radius: 10px;
       min-width: 240px;
-      // min-height: 110vh;
-      padding: 10px 10px 10px 26px;
+      padding: 10px 20px;
       transform: translateX(200%);
       background-color: $accent;
 
@@ -115,21 +127,28 @@
   }
 
   &__item {
+    display: flex;
+    align-items: center;
     @include mq("1024") {
+      min-width: 140px;
+      max-width: 160px;
+    }
+    @include mq("768") {
       border-radius: 4px;
       padding: 4px;
+      min-width: 100%;
       background-color: #fff;
     }
   }
 
   &__item:first-child {
-    @include mq("1024") {
+    @include mq("768") {
       margin-top: 50px;
     }
   }
 
   &__item:last-child {
-    @include mq("1024") {
+    @include mq("768") {
       margin-bottom: 40px;
       margin-right: 18px;
     }
@@ -137,20 +156,23 @@
 
   &__item:not(:last-child) {
     position: relative;
-    margin-right: 18px;
+    margin-right: 8px;
     color: $txtg;
     @include mq("1024") {
+      margin-right: 0;
+    }
+    @include mq("768") {
       margin-bottom: 10px;
     }
-    &::after {
-      @include pseudo($content: "/");
-      top: 0;
-      right: -12px;
-      font-size: 15px;
-      @include mq("1024") {
-        content: "";
-      }
-    }
+    // &::after {
+    //   @include pseudo($content: "/");
+    //   top: 0;
+    //   right: -12px;
+    //   font-size: 15px;
+    //   @include mq("1024") {
+    //     content: "";
+    //   }
+    // }
   }
 
   &__link {
@@ -163,7 +185,7 @@
     }
 
     &:hover {
-      transform: translateY(-2px);
+      transform: scale(0.95);
       color: $accent;
     }
     @extend %pt-700i;
@@ -172,16 +194,17 @@
   &__btn {
     position: absolute;
     right: 30px;
-    top: 100px;
+    top: 80px;
     z-index: 3;
     display: none;
     border: 3px solid $accent;
     border-radius: 6px;
+    padding: 4px 6px;
     max-height: 30px;
     transition: transform 0.3s;
     cursor: pointer;
 
-    &:hover{
+    &:hover {
       transform: scale(0.98);
     }
 
@@ -190,7 +213,7 @@
       margin-right: 2px;
       @extend %pt-700;
     }
-    @include mq("1024") {
+    @include mq("768") {
       display: flex;
       align-items: center;
     }
@@ -199,5 +222,11 @@
   &__icon {
     width: 28px;
     height: 28px;
+  }
+
+  &__pic {
+    width: 16px;
+    height: 16px;
+    margin-right: 2px;
   }
 }

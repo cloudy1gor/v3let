@@ -112,7 +112,7 @@
                   командира не поднять руку со снаряжёнными обоймами, могли запросто отстранить от полётов. После лётной смены оружие и патроны сдавали дежурному по полку.
                 </p>
 
-                <time class="content__date">11.04.2022</time>
+                <time class="content__date" id="slide">11.04.2022</time>
               </article>
             </div>
 
@@ -122,7 +122,7 @@
           </section>
 
           <!-- Слайдер. -->
-          <section class="slider" id="slide" data-aos="fade-up">
+          <section class="slider" data-aos="fade-up">
             <div class="contaner">
               <h2 class="title">Наши выпускники</h2>
             </div>
@@ -291,11 +291,7 @@
             </div>
           </section>
 
-          <button class="up">
-            <svg class="up__icon">
-              <use xlink:href="images/sprite.svg#up"></use>
-            </svg>
-          </button>
+          @@include('templates/components/_up.html')
         </div>
         @@include('templates/components/_modal.html')
       </main>
