@@ -64,9 +64,12 @@
     padding: 4px 20px;
     background-color: #fff;
     background-image: url("../images/plane.png");
-    background-position: 122px -50px;
+    background-position: 146px -50px;
     background-repeat: no-repeat;
     background-size: 180px;
+    @include mq("480"){
+      background-position: 116px -50px;
+    }
   }
 
   &__about {
@@ -106,13 +109,14 @@
     @include mq("1024") {
       margin-left: auto;
       flex-wrap: wrap;
+      padding: 10px 0;
       max-width: 60%;
     }
 
     @include mq("768") {
       position: absolute;
       right: 0;
-      top: 84px;
+      top: 66px;
       flex-direction: column;
       border-radius: 10px;
       min-width: 240px;
@@ -123,6 +127,11 @@
       &.menu__list--active {
         transform: translateX(0%);
       }
+    }
+    @include mq("480"){
+      top: 56px;
+      border-radius: 0 0 10px 10px;
+      min-width: 100%;
     }
   }
 
