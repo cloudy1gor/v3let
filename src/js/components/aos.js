@@ -1,6 +1,7 @@
 import AOS from "aos";
 
 export default function aos(params) {
+  AOS.refreshHard();
   // анимации
   AOS.init({
     // Global settings:

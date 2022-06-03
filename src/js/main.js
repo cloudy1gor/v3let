@@ -8,11 +8,11 @@ import up from "./components/up";
 import modal from "./components/modal";
 
 document.addEventListener("DOMContentLoaded", () => {
+  aos();
   lazy();
   header();
   menu();
-  swiper();
   up();
   modal();
-  aos();
+  swiper();
 });

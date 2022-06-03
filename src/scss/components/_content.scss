@@ -61,7 +61,7 @@
 
     &:first-child .content__img {
       width: 100%;
-      max-height: 360px;
+      max-height: 480px;
       @include mq("1024") {
         height: 100%;
       }
@@ -101,7 +101,7 @@
   }
 
   &__title {
-    flex-grow: 1;
+    // flex-grow: 1;
     font-size: 18px;
     margin-top: 10px;
     text-shadow: 1px 0 0 rgba(0, 0, 0, 0.8);
@@ -112,6 +112,7 @@
   }
 
   &__text {
+    flex-grow: 1;
     margin-bottom: 10px;
     max-height: 100px;
     font-size: 12px;
@@ -132,7 +133,7 @@
       position: absolute;
       display: block;
       left: 4px;
-      bottom: 8px;
+      bottom: 6px;
       border-radius: 50%;
       width: 8px;
       height: 8px;
