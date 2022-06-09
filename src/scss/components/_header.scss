@@ -64,7 +64,7 @@
     padding: 4px 20px;
     background-color: #fff;
     background-image: url("../images/plane.png");
-    background-position: 146px -50px;
+    background-position: 186px -50px;
     background-repeat: no-repeat;
     background-size: 180px;
     @include mq("480") {
@@ -90,7 +90,7 @@
 
   &__subtitle {
     max-width: 220px;
-    margin-left: 20px;
+    margin-left: 14px;
     font-size: 14px;
     text-shadow: 1px 1px 3px #fff;
     color: $title;
@@ -164,7 +164,7 @@
   }
 
   &__item:not(:last-child) {
-    position: relative;
+    // position: relative;
     margin-right: 8px;
     color: $txtg;
     @include mq("1024") {
@@ -185,7 +185,7 @@
   }
 
   &__link {
-    display: block;
+    display: contents;
     font-size: 14px;
     color: $title;
     transition: color 0.4s, transform 0.4s;
