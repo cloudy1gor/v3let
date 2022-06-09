@@ -70,6 +70,7 @@
     &:first-child .content__text {
       margin-bottom: 26px;
       font-size: 16px;
+      @include txt($lc: 8);
     }
 
     &:hover {
@@ -114,7 +115,7 @@
   &__text {
     flex-grow: 1;
     margin-bottom: 10px;
-    max-height: 100px;
+    // max-height: 100px;
     font-size: 12px;
     text-shadow: 1px 0 0 rgba(0, 0, 0, 0.8);
     overflow: hidden;

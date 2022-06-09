@@ -6,7 +6,7 @@
     background-color: #fff;
   }
 
-  &__title{
+  &__title {
     margin: 0 20px;
     text-align: center;
     text-shadow: 1px 0 0 rgba(0, 0, 0, 0.8);
@@ -18,20 +18,101 @@
     padding: 25px;
     min-width: 100%;
     min-height: 600px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    font-size: 18px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
     background-color: #fff;
+    @include mq("768") {
+      font-size: 16px;
+    }
+
+    p {
+      margin: 1em 0;
+    }
+
+    ul {
+      list-style: disc;
+      list-style-position: inside;
+    }
+
+    li::marker {
+      unicode-bidi: normal;
+    }
+
+    blockquote {
+      display: block;
+      background: #fff;
+      padding: 15px 20px 15px 45px;
+      margin: 1.5em 20px;
+      // position: relative;
+
+      /*Font*/
+      font-family: Georgia, serif;
+      font-size: 16px;
+      line-height: 1.2;
+      color: #666;
+
+      /*Borders - (Optional)*/
+      // border-left: 15px solid $accent;
+      border-right: 14px solid $accent;
+
+      /*Box Shadow - (Optional)*/
+      -moz-box-shadow: 2px 2px 15px #ccc;
+      -webkit-box-shadow: 2px 2px 15px #ccc;
+      box-shadow: 2px 2px 15px #ccc;
+
+      p {
+        margin: 0.5em 0;
+        line-height: 1.6;
+      }
+
+      // &::before {
+      //   content: "\201C"; /*Unicode for Left Double Quote*/
+
+      //   /*Font*/
+      //   font-family: Georgia, serif;
+      //   font-size: 60px;
+      //   font-weight: bold;
+      //   color: #999;
+
+      //   /*Positioning*/
+      //   position: absolute;
+      //   left: 10px;
+      //   top: 5px;
+      // }
+
+      // &::after {
+      //   /*Reset to make sure*/
+      //   content: "";
+      // }
+
+      & a {
+        text-decoration: none;
+        background: #eee;
+        cursor: pointer;
+        padding: 0 3px;
+        color: $accent;
+      }
+
+      & a:hover {
+        color: #666;
+      }
+
+      & em {
+        font-style: italic;
+      }
+    }
   }
 
   &__img {
     float: left;
     object-fit: cover;
     margin: 0 15px 8px 0;
-    min-width: 49vw;
-    max-width: 50vw;
-    min-height: 35vw;
-    max-height: 36vw;
+    min-width: 29vw;
+    max-width: 30vw;
+    min-height: 22vw;
+    max-height: 24vw;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    @include mq("768"){
+    @include mq("768") {
       float: none;
       margin-bottom: 16px;
       min-width: 100%;
@@ -46,7 +127,7 @@
     width: 100%;
 
     & small {
-      font-size: 12px;
+      font-size: 14px;
       margin: 10px 16px;
     }
   }
