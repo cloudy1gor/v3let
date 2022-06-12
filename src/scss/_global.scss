@@ -59,7 +59,13 @@ img {
   margin-bottom: 2rem;
   padding-bottom: 0.5rem;
   color: $title;
+  transition: color 0.3s;
+  cursor: pointer;
   @include txt($lc: 2);
+
+  &:hover {
+    color: $accent;
+  }
 
   &:before {
     content: "";

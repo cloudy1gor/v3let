@@ -40,6 +40,7 @@
     max-width: 40%;
     min-width: 39%;
     max-height: 397px;
+    min-height: 397px;
     object-fit: cover;
     @include mq("768") {
       min-width: 100%;

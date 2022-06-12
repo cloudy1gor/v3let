@@ -122,6 +122,30 @@
     @include txt($lc: 3);
   }
 
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 100%;
+  }
+
+  &__author {
+    position: relative;
+    padding-left: 18px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 4px;
+      bottom: 6px;
+      border-radius: 50%;
+      width: 8px;
+      height: 8px;
+      background-color: $accent;
+    }
+  }
+
   &__date {
     position: relative;
     display: block;
