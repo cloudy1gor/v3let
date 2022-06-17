@@ -26,10 +26,11 @@
     }
 
     table {
-      width: 100%;
+      max-width: 100%;
       border: none;
       margin-bottom: 0 auto 20px !important;
-      border-collapse: separate;
+      border-collapse: collapse;
+      table-layout: fixed;
 
       thead th {
         font-weight: bold;
@@ -39,6 +40,24 @@
         background: #ededed;
         font-size: 14px;
         border-top: 1px solid #ddd;
+        @include mq("768") {
+          min-width: auto;
+          font-size: 8px;
+        }
+        @include mq("480") {
+          font-size: 6px;
+        }
+      }
+
+      tr th,
+      tr td {
+        @include mq("768") {
+          min-width: auto;
+          font-size: 8px;
+        }
+        @include mq("480") {
+          font-size: 6px;
+        }
       }
 
       tr th:first-child,
