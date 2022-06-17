@@ -50,6 +50,10 @@
     height: 24px;
     font-style: 14px;
     padding: 2px;
+    @include mq("480") {
+      min-width: none;
+      max-width: 62px;
+    }
 
     // &:focus {
 

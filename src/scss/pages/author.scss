@@ -167,14 +167,15 @@
   &__content {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
+    flex-direction: column;
     margin: 15px 20px;
     border-radius: 8px;
-    list-style: decimal;
-    padding: 50px 0 30px 12%;
+    list-style: square;
+    padding: 20px 0 30px 8px;
     // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     @include mq("768") {
-      padding: 20px 0 20px 20%;
+      padding: 8px 0 8px 8px;
     }
   }
 
@@ -191,7 +192,7 @@
 
   &__link {
     display: inline-block;
-    width: 320px;
+    max-width: 100%;
     font-size: 18px;
     color: $title;
     transition: color 0.3s, transform 0.4s;
