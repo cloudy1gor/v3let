@@ -13,13 +13,6 @@
     margin-bottom: 40px;
   }
 
-  &__item {
-    box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, rgba(0, 0, 0, 0.2) 0 -3px 0 inset;
-    &:not(:last-child) {
-      margin-bottom: 25px;
-    }
-  }
-
   &__element {
     position: relative;
     display: flex;
@@ -46,7 +39,10 @@
     min-height: 397px;
     object-fit: cover;
     @include mq("768") {
+      margin: 0 auto;
       min-width: 100%;
+      min-height: 200px;
+      max-height: 200px;
       margin-bottom: 16px;
     }
   }
@@ -71,6 +67,7 @@
   &__title {
     margin-bottom: 15px;
     text-shadow: 1px 0 0 rgba(0, 0, 0, 0.8);
+    text-align: center;
     @include txt($lc: 2);
   }
 
@@ -78,7 +75,12 @@
     flex-grow: 1;
     margin-bottom: 14px;
     text-shadow: 1px 0 0 rgba(0, 0, 0, 0.8);
+    max-height: 268px;
     @include txt($lc: 11);
+
+    @include mq("768") {
+      @include txt($lc: 4);
+    }
   }
 
   &__date {
@@ -103,9 +105,13 @@
   }
 
   &__btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
     border: 2px solid $accent;
     border-radius: 8px;
     margin: 0 auto;
+    // padding: 10px 24px;
     width: 180px;
     height: 40px;
     background-color: #fff;
@@ -116,9 +122,48 @@
     &:hover {
       transform: scale(1.04);
       background-color: $accent;
-      span {
-        color: #fff;
+      color: #fff;
+      border: 2px solid $accent;
+    }
+  }
+
+  &__item {
+    box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, rgba(0, 0, 0, 0.2) 0 -3px 0 inset;
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__item-second {
+    box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, rgba(0, 0, 0, 0.2) 0 -3px 0 inset;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+
+    .news__image-second {
+      margin-right: 20px;
+      object-fit: cover;
+      width: 280px;
+      height: 200px;
+      @include mq("768") {
+        min-width: 100%;
+        margin-bottom: 16px;
       }
+    }
+
+    .news__title-second {
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0.8);
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .news__text-second {
+      flex-grow: 1;
+      margin-bottom: 14px;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0.8);
+      max-height: 74px;
+      @include txt($lc: 3);
     }
   }
 }

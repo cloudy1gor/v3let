@@ -15,7 +15,7 @@
   &__text {
     border-radius: 12px;
     margin: 15px 15px 0 0;
-    padding: 25px;
+    padding: 25px 60px;
     min-width: 100%;
     min-height: 600px;
     font-size: 18px;
@@ -23,6 +23,7 @@
     background-color: #fff;
     @include mq("768") {
       font-size: 16px;
+      padding: 25px;
     }
 
     table {
@@ -204,6 +205,9 @@
     justify-content: center;
     margin: 20px 0;
     width: 100%;
+    @include mq("480") {
+      flex-direction: column;
+    }
 
     & small {
       border: 2px solid $accent;
@@ -213,6 +217,9 @@
       font-size: 14px;
       background-color: #fff;
       color: $accent;
+      @include mq("768") {
+        font-size: 12px;
+      }
 
       & a {
         color: #666;

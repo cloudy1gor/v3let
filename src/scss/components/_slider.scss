@@ -1,24 +1,40 @@
 .slider {
-  margin: 15px 0 45px;
-
   &__container {
-    margin-left: 10px;
+    max-height: 320px;
   }
 
-  &__item {
-    max-width: 230px;
-    max-height: 400px;
-    width: auto;
-    overflow: hidden;
-    @include mq("1024") {
-      max-height: 250px;
+  &__list {
+    min-height: 300px;
+    margin-bottom: 20px;
+    @include mq("768") {
+      min-height: 120px;
+      max-height: 140px;
     }
   }
 
-  &__img {
-    min-width: 100%;
-    height: 320px;
-    margin-right: 10px;
-    object-fit: cover;
+  &__item {
+    display: flex;
+    padding-left: 14px;
+  }
+
+  &__link {
+    &:not(last-child) {
+      margin-right: 20px;
+
+      @include mq("480") {
+        margin-right: 4px;
+      }
+    }
+
+    img {
+      width: 310px;
+      height: 200px;
+      object-fit: cover;
+
+      @include mq("768") {
+        width: 160px;
+        height: 120px;
+      }
+    }
   }
 }

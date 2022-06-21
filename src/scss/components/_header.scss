@@ -143,8 +143,9 @@
       max-width: 160px;
     }
     @include mq("768") {
+      flex-direction: column;
       border-radius: 4px;
-      padding: 4px;
+      padding: 10px;
       min-width: 100%;
       background-color: #fff;
     }
@@ -213,6 +214,14 @@
     @extend %pt-700i;
   }
 
+    &__item:nth-child(4n) {
+    a {
+      & span :hover {
+        transform: none;
+      }
+    }
+  }
+
   &__btn {
     position: absolute;
     right: 30px;
@@ -221,8 +230,9 @@
     display: none;
     border: 3px solid $accent;
     border-radius: 6px;
-    padding: 4px 6px;
+    padding: 12px 10px;
     max-height: 30px;
+    background-color: #fff;
     transition: transform 0.3s;
     cursor: pointer;
 

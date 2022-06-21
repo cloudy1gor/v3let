@@ -21,7 +21,6 @@
   &__dialog {
     margin: 100px auto;
     max-width: 700px;
-
   }
 
   &__content {
@@ -34,6 +33,18 @@
     max-height: 90vh;
     box-shadow: rgba(0, 0, 0, 0.76) 0px 22px 70px 4px;
     background-color: #fff;
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  &__text {
+    margin-bottom: 14px;
   }
 
   &__inner {
@@ -64,5 +75,4 @@
     opacity: 0.5;
     cursor: pointer;
   }
-
 }
