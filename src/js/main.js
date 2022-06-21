@@ -15,6 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
   menu();
   up();
   modal();
-  // swiper();
   slider();
+  // swiper();
 });

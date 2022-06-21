@@ -1,40 +1,63 @@
-.slider {
-  &__container {
-    max-height: 320px;
-  }
+/**
+  * SimpleAdaptiveSlider by Itchief v2.0.0 (https://github.com/itchief/ui-components/tree/master/simple-adaptive-slider)
+  * Copyright 2020 - 2021 Alexander Maltsev
+  * Licensed under MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
+  */
 
-  &__list {
-    min-height: 300px;
-    margin-bottom: 20px;
+/* стили для корневого элемента слайдера */
+.itcss {
+  position: relative;
+  overflow: hidden;
+  max-width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* стили для wrapper */
+.itcss__wrapper {
+  position: relative;
+  overflow: hidden;
+  // background-color: #eee;
+}
+
+/* стили для элемента, в котором непосредственно расположены элементы (слайды) */
+.itcss__items {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* класс для отключения transition */
+.transition-none {
+  transition: none;
+}
+
+/* стили для элементов */
+.itcss__item {
+  flex: 0 0 100%;
+  max-width: 25%;
+  max-height: 320px;
+  position: relative;
     @include mq("768") {
-      min-height: 120px;
-      max-height: 140px;
-    }
+    max-width: 32%;
+  }
+  @include mq("480") {
+    max-width: 48%;
   }
 
-  &__item {
-    display: flex;
-    padding-left: 14px;
+  &:not(last-child) {
+    margin-right: 14px;
+
+    @include mq("480") {
+      margin-right: 4px;
+    }
   }
+}
 
-  &__link {
-    &:not(last-child) {
-      margin-right: 20px;
+.slider {
+  margin-bottom: 40px;
 
-      @include mq("480") {
-        margin-right: 4px;
-      }
-    }
-
-    img {
-      width: 310px;
-      height: 200px;
-      object-fit: cover;
-
-      @include mq("768") {
-        width: 160px;
-        height: 120px;
-      }
-    }
+  &__img {
+    object-fit: cover;
+    max-height: 320px;
   }
 }
