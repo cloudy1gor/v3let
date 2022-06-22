@@ -67,8 +67,12 @@
   &__title {
     margin-bottom: 15px;
     text-shadow: 1px 0 0 rgba(0, 0, 0, 0.8);
-    text-align: center;
+    text-align: left;
     @include txt($lc: 2);
+
+    @include mq("1024") {
+      font-size: 18px;
+    }
   }
 
   &__text {

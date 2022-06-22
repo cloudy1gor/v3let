@@ -14,8 +14,12 @@
     border-bottom: 1px solid $accent;
     padding-bottom: 5px;
     text-align: center;
-    font-size: 36px;
+    font-size: 26px;
     @extend %pt-400i;
+
+    @include mq("480") {
+      font-size: 20px;
+    }
   }
 
   &__dialog {
@@ -73,6 +77,11 @@
     color: #000;
     background-color: transparent;
     opacity: 0.5;
+    cursor: pointer;
+  }
+
+  &__mail {
+    margin-right: 8px;
     cursor: pointer;
   }
 }

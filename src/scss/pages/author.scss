@@ -53,7 +53,7 @@
 
   &__body {
     padding-left: 20px;
-    @include mq("768"){
+    @include mq("768") {
       padding-left: 0;
     }
   }
@@ -171,16 +171,44 @@
     flex-direction: column;
     margin: 15px 20px;
     border-radius: 8px;
-    list-style: square;
-    padding: 20px 0 30px 8px;
+    // list-style: square;
+    padding: 0 0 30px 8px;
     // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     @include mq("768") {
-      padding: 8px 0 8px 8px;
+      padding: 0 0 8px 8px;
     }
   }
 
   &__item {
+    position: relative;
     min-width: 30%;
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid #ececec;
+    @include mq("768") {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    small {
+      font-style: 10px;
+      min-width: 140px;
+    }
+
+    &::before {
+      @include pseudo();
+      left: -8px;
+      top: 11px;
+      width: 4px;
+      height: 4px;
+      background-color: $accent;
+      @include mq("480") {
+        left: -12px;
+      }
+    }
+
     &::marker {
       color: $accent;
     }
@@ -192,6 +220,7 @@
 
   &__link {
     display: inline-block;
+    margin-right: 10px;
     max-width: 100%;
     font-size: 18px;
     color: $title;
@@ -208,9 +237,8 @@
     @extend %pt-700i;
   }
 
-  &__subtitle{
+  &__subtitle {
     color: #fff;
     // font-size: 28px;
   }
 }
-

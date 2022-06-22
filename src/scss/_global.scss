@@ -20,15 +20,24 @@ body {
 }
 
 .wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   min-height: 100vh;
+  background-image: url('../images/cloud1.png');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 200%;
 }
 
 .main {
   flex-grow: 1;
   margin-top: 140px;
+  background-image: url("../images/cloud.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 300%;
 }
 
 .container {
@@ -215,6 +224,7 @@ span {
     display: block;
     height: auto;
     box-shadow: unset;
+    border: unset;
   }
 
   &:hover {
