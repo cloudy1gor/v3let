@@ -72,6 +72,7 @@
     "normalize.css": "^8.0.1",
     "simple-slider": "^1.0.1",
     "swiper": "^8.1.0",
+    "tiny-slider": "^2.9.4",
     "vanilla-lazyload": "^17.8.1"
   }
 }
