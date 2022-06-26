@@ -10,13 +10,13 @@ import sliderS from "./components/slider";
 import popUp from "./components/popup";
 
 document.addEventListener("DOMContentLoaded", () => {
-  sliderS();
   aos();
   lazy();
   header();
   menu();
-  up();
   modal();
-  popUp();
+  up();
+  // popUp();
+  sliderS();
   // swiper();
 });

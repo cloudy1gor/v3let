@@ -68,6 +68,8 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "embla-carousel": "^6.2.0",
+    "embla-carousel-autoplay": "^6.2.0",
     "jquery": "^3.5.1",
     "normalize.css": "^8.0.1",
     "simple-slider": "^1.0.1",
