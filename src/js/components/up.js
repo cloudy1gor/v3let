@@ -1,38 +1,31 @@
-export default function up(params) {
-  // кнопка наверх
-  function scrollTo(to, duration = 1000) {
-    const element = document.scrollingElement || document.documentElement,
-      start = element.scrollTop,
-      change = to - start,
-      startDate = +new Date(),
-      // t = current time
-      // b = start value
-      // c = change in value
-      // d = duration
-      easeInOutQuad = function (t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return (c / 2) * t * t + b;
-        t--;
-        return (-c / 2) * (t * (t - 2) - 1) + b;
-      },
-      animateScroll = function () {
-        const currentDate = +new Date();
-        const currentTime = currentDate - startDate;
-        element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
-        if (currentTime < duration) {
-          requestAnimationFrame(animateScroll);
-        } else {
-          element.scrollTop = to;
-        }
-      };
-    animateScroll();
+export default function up() {
+  // top of the page
+  const root = document.documentElement;
+  // the actual back-to-top button
+  const button = document.querySelector(".up");
+
+  // show back-to-top button when page is scrolled enough that the title is off the page
+  function handleScroll() {
+    const scrollTotal = root.scrollHeight - root.clientHeight;
+
+    if (root.scrollTop / scrollTotal > 0.3) {
+      // if the page has been scrolled down at least 30% from the top, show back-to-top button
+      button.classList.add("up--animated");
+    } else {
+      // otherwise, hide back-to-top button
+      button.classList.remove("up--animated");
+    }
   }
 
-  let btn = document.querySelector(".up");
-  // При клике прокручиваем на самый верх
-  btn.onclick = function (click) {
-    click.preventDefault();
-    // Вызываем функцию, первый аргумент - отступ, второй - скорость скролла, чем больше значение, тем медленнее скорость прокрутки
-    scrollTo(0, 400);
-  };
+  // send the user back to top of the page when the back-to-top button is clicked. Note: button will be hidden by the handleScroll function since it's less than 20% scrolled when returned to top of the page
+  function handleClick() {
+    root.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
+  // call functions
+  button.addEventListener("click", handleClick);
+  document.addEventListener("scroll", handleScroll);
 }

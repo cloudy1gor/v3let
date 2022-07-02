@@ -7,7 +7,7 @@ import aos from "./components/aos";
 import up from "./components/up";
 import modal from "./components/modal";
 import sliderS from "./components/slider";
-import popUp from "./components/popup";
+// import popUp from "./components/popup";
 
 document.addEventListener("DOMContentLoaded", () => {
   aos();
