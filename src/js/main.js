@@ -1,5 +1,4 @@
-// import $ from "jquery";
-// import swiper from "./components/swiper";
+import themeSwitcher from "./components/themeSwitcher";
 import lazy from "./components/lazy";
 import header from "./components/header";
 import menu from "./components/menu";
@@ -17,6 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
   modal();
   up();
   // popUp();
+  themeSwitcher();
   sliderS();
-  // swiper();
 });

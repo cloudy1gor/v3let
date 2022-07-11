@@ -1,0 +1,192 @@
+body {
+  &.dark-mode {
+    color: #fff;
+    background-image: $bg2-dark;
+
+    .wrapper {
+      background-image: url(../images/stars.png);
+      background-size: 100% 600px;
+    }
+
+    .header-top {
+      @extend %bg3-dark;
+    }
+
+    .header {
+      &__inner {
+        background-color: #132238;
+        background-image: url("../images/plane2.png");
+        background-position: 155px -8px;
+      }
+
+      &__title {
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
+      }
+
+      &__link {
+        color: $accent;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+
+      &__subtitle {
+        color: #cfd3ce;
+      }
+    }
+
+    .search {
+      &__form {
+        border-color: $accent;
+      }
+
+      &__icon {
+        fill: $accent;
+      }
+    }
+
+    .social__item {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #000;
+    }
+
+    .social__icon {
+      fill: $accent;
+    }
+
+    .title {
+      color: $accent;
+      text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
+
+      &:hover {
+        color: #cfd3ce;
+      }
+
+      &:before {
+        border-bottom: 2px solid $accent;
+      }
+
+      &:after {
+        border-bottom: 2px solid $accent;
+      }
+    }
+
+    .menu {
+      &__link {
+        color: #cfd3ce;
+      }
+
+      &__pic {
+        background-color: #fff;
+        border-radius: 50%;
+        // use {
+        //   fill: #fff;
+        // }
+      }
+    }
+
+    .content {
+      &__item {
+        background-image: $bg-dark;
+        box-shadow: rgba(18, 93, 152, 0.9) 0 2px 4px, rgba(18, 93, 152, 0.9) 0 7px 13px -3px, rgba(18, 93, 152, 0.9) 0 -3px 0 inset;
+
+        &:hover {
+          box-shadow: 0 5px 20px 5px rgba(255, 255, 255, 0.4);
+        }
+      }
+
+      &__title {
+        color: $accent;
+        text-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+      }
+
+      &__text {
+        color: #cfd3ce;
+      }
+    }
+
+    .news {
+      &__item {
+        box-shadow: rgba(18, 93, 152, 0.9) 0 2px 4px, rgba(18, 93, 152, 0.9) 0 7px 13px -3px, rgba(18, 93, 152, 0.9) 0 -3px 0 inset;
+      }
+
+      &__element {
+        background-image: $bg4-dark;
+
+        &:hover {
+          box-shadow: 0 5px 20px 5px rgba(255, 255, 255, 0.4);
+        }
+      }
+
+      &__title {
+        color: $accent;
+        text-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+      }
+
+      &__text {
+        color: #cfd3ce;
+      }
+    }
+
+    .footer {
+      @extend %bg3-dark;
+    }
+
+    .content,
+    .news,
+    .product,
+    .author__container,
+    .gallery,
+    .product__content {
+      // @extend %bg-dark;
+      background-color: #132238;
+      // background-color: #222831;
+    }
+
+    .up {
+      &__txt {
+        color: $accent;
+      }
+    }
+
+    .modal {
+      &__content {
+        background-color: #132238;
+      }
+
+      &__close {
+        color: #fff;
+      }
+
+      &__title {
+        color: #cfd3ce;
+      }
+
+      &__subtitle {
+        color: #cfd3ce;
+      }
+
+      &__text {
+        p {
+          color: #cfd3ce;
+        }
+      }
+
+      address {
+        span,
+        a {
+          color: #cfd3ce;
+        }
+      }
+    }
+
+    .created {
+      &__icon {
+        fill: none;
+      }
+    }
+  }
+}
