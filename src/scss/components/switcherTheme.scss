@@ -38,7 +38,10 @@ body {
 
     .search {
       &__form {
+        border-radius: 8px;
         border-color: $accent;
+        padding: 2px;
+        background-color: #000;
       }
 
       &__icon {
@@ -74,7 +77,51 @@ body {
       }
     }
 
+    .dropdown-menu li a {
+      @include mq("768") {
+        color: #cfd3ce;
+      }
+    }
+
+    .has-text-align-center {
+      color: #cfd3ce;
+    }
+
+    .wp-block-media-text__content {
+      & p {
+        color: #cfd3ce;
+      }
+
+      & p strong {
+        color: #cfd3ce;
+      }
+    }
+
+    .wpd-thread-info  {
+      color: #fff;
+    }
+
+    .wpdtc {
+      color: $accent;
+    }
+
+    .wpd-login {
+      color: #fff;
+    }
+
     .menu {
+      &__list {
+        @include mq("768") {
+          background-color: #132238;
+        }
+      }
+
+      &__item {
+        @include mq("768") {
+          background-color: #333;
+        }
+      }
+
       &__link {
         color: #cfd3ce;
 
@@ -107,7 +154,7 @@ body {
         text-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
       }
 
-      &__text {
+      &__text p {
         color: #cfd3ce;
       }
     }
@@ -153,8 +200,23 @@ body {
         background-color: #132238;
 
         & p {
-          color: #fff;
+          color: #cfd3ce;
+
+          & strong {
+            color: #cfd3ce;
+          }
         }
+      }
+
+      &__text table tbody tr:nth-child(even) {
+        background: #000;
+        border-bottom: 1px solid #fff;
+      }
+    }
+
+    .gallery {
+      &__item {
+        background-color: #222;
       }
     }
 
@@ -162,6 +224,10 @@ body {
       &__name,
       &__title {
         color: $accent;
+      }
+
+      &__item {
+        border-color: $accent;
       }
 
       &__year,
@@ -196,7 +262,7 @@ body {
 
     .content,
     .news,
-    .product,
+    .product__wrapper,
     .author__container,
     .gallery,
     .product__content {
