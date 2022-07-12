@@ -10,8 +10,8 @@ export default function sliderS() {
   const nextBtn = wrap.querySelector(".embla__button--next");
   const progressBar = document.querySelector(".embla__progress__bar");
 
-  const autoplay = Autoplay({ delay: 6000, stopOnInteraction: false }, (emblaRoot) => emblaRoot.parentElement);
-  const embla = EmblaCarousel(viewPort, { loop: true, slidesToScroll: 1, skipSnaps: false, dragFree: true, containScroll: "trimSnaps" }, [autoplay]);
+  const autoplay = Autoplay({ delay: 10000, stopOnInteraction: false }, (emblaRoot) => emblaRoot.parentElement);
+  const embla = EmblaCarousel(viewPort, { loop: false, slidesToScroll: 1, skipSnaps: false, dragFree: true, containScroll: "trimSnaps" }, [autoplay]);
   const disablePrevAndNextBtns = disablePrevNextBtns(prevBtn, nextBtn, embla);
   const updateProgress = updateProgressBar(progressBar, embla);
 

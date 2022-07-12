@@ -8,8 +8,8 @@ export default function up() {
   function handleScroll() {
     const scrollTotal = root.scrollHeight - root.clientHeight;
 
-    if (root.scrollTop / scrollTotal > 0.3) {
-      // if the page has been scrolled down at least 30% from the top, show back-to-top button
+    if (root.scrollTop / scrollTotal > 0.2) {
+      // if the page has been scrolled down at least 20% from the top, show back-to-top button
       button.classList.add("up--animated");
     } else {
       // otherwise, hide back-to-top button
