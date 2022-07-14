@@ -4,6 +4,9 @@
   justify-content: space-between;
   margin: 8px 0;
   height: 60px;
+  @include mq("480") {
+    justify-content: unset;
+  }
 }
 
 .social {
@@ -36,6 +39,8 @@
 
 .search {
   padding: 0;
+  margin-left: auto;
+  margin-right: 26px;
 
   &__title {
     @include mq("768") {

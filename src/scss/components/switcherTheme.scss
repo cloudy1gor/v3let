@@ -97,7 +97,7 @@ body {
       }
     }
 
-    .wpd-thread-info  {
+    .wpd-thread-info {
       color: #fff;
     }
 
@@ -107,6 +107,12 @@ body {
 
     .wpd-login {
       color: #fff;
+    }
+
+    .dropdown-menu {
+      @include mq("768") {
+        background-color: transparent;
+      }
     }
 
     .menu {

@@ -29,7 +29,7 @@
 }
 
 .embla__viewport {
-  overflow: hidden;
+  // overflow: hidden;
   width: 100%;
 }
 
@@ -68,8 +68,8 @@
   touch-action: manipulation;
   position: absolute;
   z-index: 1;
-  top: 50%;
-  transform: translateY(-50%);
+  top: -56px;
+  // transform: translateY(-50%);
   width: 34px;
   height: 34px;
   justify-content: center;
@@ -99,7 +99,11 @@
 }
 
 .embla__button--prev {
-  left: 27px;
+  right: 100px;
+
+  @include mq("480") {
+    right: 70px;
+  }
 }
 
 .embla__button--next {
