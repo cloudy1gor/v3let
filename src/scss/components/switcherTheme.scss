@@ -222,6 +222,18 @@ body {
         background: #000;
         border-bottom: 1px solid #fff;
       }
+
+      &__text blockquote p {
+        color: #000;
+      }
+
+      &__wrapper {
+        background: transparent;
+      }
+
+      &__content {
+        background: #132238;
+      }
     }
 
     .gallery {
@@ -272,7 +284,6 @@ body {
 
     .content,
     .news,
-    .product__wrapper,
     .author__container,
     .gallery,
     .product__content {
