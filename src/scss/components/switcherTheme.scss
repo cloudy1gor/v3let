@@ -95,6 +95,10 @@ body {
       & p strong {
         color: #cfd3ce;
       }
+
+      & blockquote > p strong {
+        color: #000;
+      }
     }
 
     .wpd-thread-info {
@@ -211,6 +215,10 @@ body {
           & strong {
             color: #cfd3ce;
           }
+        }
+
+        & blockquote > p strong {
+          color: #000;
         }
 
         & > blockquote p {
