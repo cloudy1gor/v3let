@@ -23,5 +23,4 @@ export default function sliderS() {
   embla.on("select", disablePrevAndNextBtns);
   embla.on("scroll", updateProgress);
 
-  // const embla = EmblaCarousel(emblaNode, options);
 }
