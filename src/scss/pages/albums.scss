@@ -142,10 +142,13 @@
     &--overflow {
       position: absolute;
       left: 50%;
-      bottom: 10px;
+      bottom: 1px;
       transform: translateX(-50%);
-      color: #fff;
-      text-shadow: 3px 2px 5px $accent;
+      color: #7D1E6A;
+      text-shadow: 2px 2px 2px #EEB0B0;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 8px;
+      padding: 0 6px;
     }
   }
 
