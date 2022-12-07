@@ -38,6 +38,7 @@
 }
 
 .search {
+  margin: 0!important;
   padding: 0;
   margin-left: auto;
   margin-right: 26px;
@@ -66,9 +67,9 @@
       max-width: 62px;
     }
 
-    // &:focus {
-
-    // }
+    &:focus {
+      background: transparent;
+    }
 
     @extend %pt-400i;
   }

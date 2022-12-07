@@ -126,6 +126,10 @@
     cursor: pointer;
     @include txt(1);
 
+    & > span {
+      color: $accent;
+    }
+
     &:hover {
       transform: scale(1.04);
       background-color: $accent;
