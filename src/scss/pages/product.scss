@@ -236,5 +236,34 @@
         }
       }
     }
+
+    &--top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: right;
+
+      & small {
+        border: 2px solid $accent;
+        border-radius: 8px;
+        margin: 10px 16px;
+        padding: 2px 10px;
+        font-size: 16px;
+        background-color: #fff;
+        color: $accent;
+        @include mq("768") {
+          margin: 4px 0;
+          font-size: 12px;
+        }
+  
+        & a {
+          color: #666;
+  
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
   }
 }

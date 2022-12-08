@@ -34,6 +34,33 @@
     &:hover {
       transform: scale(1.1);
     }
+
+    &--second {
+      // position: relative;
+      width: 32px;
+      height: 32px;
+      margin: 0px 4px 0px 0px;
+      background: #75975e;
+      border-radius: 4px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+
+      &::before {
+        // content: '';
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // width: 26px;
+        // height: 26px;
+        // background-color: #75975e;
+      }
+    }
+
   }
 }
 

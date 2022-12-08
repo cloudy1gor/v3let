@@ -139,7 +139,7 @@
     display: flex;
     align-items: center;
     @include mq("1024") {
-      min-width: 140px;
+      min-width: auto;
       max-width: 160px;
     }
     @include mq("768") {
@@ -169,7 +169,7 @@
     margin-right: 8px;
     color: $txtg;
     @include mq("1024") {
-      margin-right: 0;
+      margin-right: 10px;
     }
     @include mq("768") {
       margin-bottom: 10px;

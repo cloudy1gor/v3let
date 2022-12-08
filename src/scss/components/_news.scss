@@ -127,6 +127,7 @@
     @include txt(1);
 
     & > span {
+      font-weight: 700;
       color: $accent;
     }
 
@@ -135,6 +136,11 @@
       background-color: $accent;
       color: #fff;
       border: 2px solid $accent;
+
+      & > span {
+        font-weight: 700;
+        color: #fff;
+      }
     }
   }
 

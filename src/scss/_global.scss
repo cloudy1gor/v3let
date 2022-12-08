@@ -307,6 +307,7 @@ strong {
   align-items: center;
   justify-content: center;
   font-size: 14px;
+  color: #999;
   @include mq("480") {
     font-size: 10px;
   }
