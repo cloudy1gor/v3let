@@ -1,4 +1,6 @@
 ## v3let.ru - Сайт выпускников 1974 года.
+![](https://github.com/cloudy1gor/v3let/tree/main/screens/GIF.gif)</br>
+
 ![](/screens/screen.png)</br>
 ![](/screens/screen2.png)</br>
 ![](/screens/screen3.png)</br>
