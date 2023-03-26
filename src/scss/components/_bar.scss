@@ -5,7 +5,7 @@
   margin: 8px 0;
   height: 60px;
   @include mq("480") {
-    justify-content: unset;
+    justify-content: space-evenly;
   }
 }
 

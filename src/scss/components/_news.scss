@@ -83,6 +83,7 @@
     margin-bottom: 14px;
     text-shadow: 1px 0 0 rgba(0, 0, 0, 0.8);
     max-height: 268px;
+    max-width: 694px;
     @include txt($lc: 11);
 
     @include mq("768") {

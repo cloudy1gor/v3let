@@ -9,11 +9,11 @@ export default function header(params) {
 
   window.addEventListener("scroll", () => {
     if (scrollPosition() > lastScroll && !containHide() && scrollPosition() > defaultOffset) {
-      //scroll down
+      // scroll down
       header.classList.add("hide");
       header.classList.remove("color");
     } else if (scrollPosition() < lastScroll && containHide()) {
-      //scroll up
+      // scroll up
       header.classList.remove("hide");
       header.classList.add("color");
     }
