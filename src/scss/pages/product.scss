@@ -15,7 +15,7 @@
   &__text {
     border-radius: 12px;
     margin: 15px 15px 0 0;
-    padding: 25px 60px;
+    padding: 24px 60px;
     min-width: 100%;
     min-height: 600px;
     font-size: 18px;
@@ -23,7 +23,16 @@
     background-color: #fff;
     @include mq("768") {
       font-size: 16px;
-      padding: 25px;
+      padding: 8px;
+
+      & > div, h5, h4, h3, h2, span, p {
+        padding: 0 8px!important;
+      }
+    }
+    @include mq("1248") {
+      & > blockquote > div {
+        padding: 0!important;
+      }
     }
 
     table {

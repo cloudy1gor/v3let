@@ -193,6 +193,11 @@
     @include mq("1024") {
       color: #000;
     }
+    @include mq("768"){
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
 
     span {
       display: block;

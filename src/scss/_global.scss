@@ -36,6 +36,9 @@ input:-webkit-autofill {
   background-position: top;
   background-repeat: no-repeat;
   background-size: 200%;
+  @include mq("768"){
+    background-size: 350%;
+  }
 }
 
 .main {
@@ -45,6 +48,9 @@ input:-webkit-autofill {
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 300%;
+  @include mq("768"){
+    background-size: 350%;
+  }
 }
 
 .container {
