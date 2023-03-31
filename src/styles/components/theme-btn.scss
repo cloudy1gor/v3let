@@ -1,0 +1,25 @@
+@use 'utils/forwards' as *;
+
+.theme {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: rem(210);
+	right: rem(34);
+	width: rem(40);
+	height: rem(40);
+	background-color: #e5f4f3;
+	border: rem(3) solid #000;
+	border-radius: 50%;
+
+	&__icon {
+	  width: rem(26);
+	  height: rem(26);
+	  fill: #000;
+	}
+
+	&__txt {
+	  left: rem(4);
+	  color: $accent;
+	}
+  }

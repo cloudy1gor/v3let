@@ -1,0 +1,22 @@
+@use 'utils/forwards' as *;
+
+.slider {
+	margin-bottom: rem(40);
+
+	&__item {
+	  position: relative;
+	  max-height: rem(240);
+	  // flex: 0 0 15%;
+
+	  &:not(last-child) {
+		margin-right: rem(14);
+	  }
+	}
+
+	&__img {
+	  // object-fit: cover;
+	  // max-height: rem(320);
+	  // min-height: rem(320);
+	  // cursor: move;
+	}
+  }

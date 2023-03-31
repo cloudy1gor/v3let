@@ -1,0 +1,96 @@
+// @use 'sass:map';
+@use 'utils/forwards' as *;
+@use 'mixins/media';
+
+:focus-visible {
+	box-shadow: 0 0 0 rem($focus-width) $focus-color;
+}
+
+.body {
+	background-color: $background;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+.container {
+	max-width: rem($container);
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: rem($offset);
+	padding-left: rem($offset);
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+
+	column-gap: rem($gap);
+	row-gap: rem($rowGap-min);
+
+	@include media.min(md) {
+		row-gap: rem($rowGap-max);
+	}
+}
+
+.cover {
+	position: relative;
+
+	& img {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.icon {
+	width: $icon-size;
+	height: $icon-size;
+}
+
+.divider {
+	width: 100%;
+	height: rem(1);
+
+	background: $black;
+}
+
+.backdrop {
+	position: fixed;
+	z-index: $backdropZIndex;
+	inset: 0;
+
+	background-color: $backdropBg;
+	opacity: 0;
+
+	transition: opacity 0.3s;
+
+	&.--show {
+		opacity: 0.5;
+	}
+}
+
+/*
+	This will hide the focus indicator if the element receives focus via the mouse,
+	but it will still show up on keyboard focus.
+*/
+.js-focus-visible :focus:not(.focus-visible) {
+	outline: none;
+}
+
+.focus-visible {
+	box-shadow: 0 0 0 rem($focus-width) $focus-color;
+}

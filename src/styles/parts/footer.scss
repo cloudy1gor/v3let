@@ -1,0 +1,43 @@
+@use 'utils/forwards' as *;
+@use 'mixins/media';
+
+.footer {
+	background-color: $accent;
+	// z-index: 10;
+
+	&__inner {
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	  border-bottom: rem(1) solid #fff;
+	  min-height: rem(60);
+	}
+
+	&__txt {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: stretch;
+	  justify-content: center;
+	  margin-left: rem(18);
+	  list-style-type: disc;
+	  @include media.max(md) {
+		font-size: rem(14);
+	  }
+	}
+
+	&__copy {
+	  color: #fff;
+	  @include media.max(sm) {
+		font-size: rem(10);
+	  }
+	}
+
+	& .social__icon {
+	  border: rem(2) solid #fff;
+	  border-radius: 50%;
+	  background-color: #fff;
+
+	  overflow: hidden;
+	}
+  }
+

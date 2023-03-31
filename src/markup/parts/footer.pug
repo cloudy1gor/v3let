@@ -1,0 +1,29 @@
+//- .footer__copy
+//- 	| &copy;
+//- 	span#copy
+//- 	| &nbsp; #{ config.siteName }. #{ config.copyright }
+//- 	script document.querySelector('#copy').innerText = new Date().getFullYear();
+.footer__inner
+	ol.footer__txt
+		li.footer__copy Взлет® - сайт выпускников 1974 года.
+		li.footer__copy &copy; Все права защищены 2007-2022г.
+	dvi.social
+		ul.social__list
+			li.social__item
+				a.social__link(href='https://ok.ru/profile/529378520930' target='_blank')
+					svg.social__icon
+						use(xlink:href='assets/sprites/icons.svg#odnok')
+			li.social__item
+				a.social__link(href='https://telegram.me/v3letRu' target='_blank')
+					svg.social__icon
+						use(xlink:href='assets/sprites/icons.svg#telegram')
+			li.social__item
+				a.social__link(href='mailto:admin@v3let.ru')
+					svg.social__icon
+						use(xlink:href='assets/sprites/icons.svg#email')
+.created
+	svg.created__icon(xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewbox='0 0 24 24' stroke-width='1.5' stroke='currentColor' fill='#fff' stroke-linecap='round' stroke-linejoin='round')
+		path(stroke='none' d='M0 0h24v24H0z' fill='none')
+		path(d='M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1')
+	|       Created by
+	a.created__link(href='https://cloudy1gor.github.io' target='_blank')  Савельев Игорь

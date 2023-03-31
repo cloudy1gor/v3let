@@ -1,0 +1,58 @@
+extends core/layout.pug
+
+block settings
+	-
+		const page = {
+			id:          0,
+			name:        'Gallery',
+			description: null,
+			lang:        'ru',
+			canonical:   'http://localhost:3300',
+			header:      true,
+			footer:      true,
+			modal:       true,
+			upBtn:       true,
+			bar:         true,
+		}
+
+		const meta = {
+			keywords:                        [],
+			image:                           config.image,
+			author:                          null,
+			ogType:                          'website',
+			ogUrl:                           page.canonical,
+			ogLocale:                        'ru_RU',
+			ogSiteName:                      config.siteName,
+			ogTitle:                         true,
+			ogDescription:                   page.description,
+			ogImage:                         config.image,
+			ogImageType:                     null,
+			ogImageWidth:                    null,
+			ogImageHeight:                   null,
+			ogImageAlt:                      null,
+			twitterCard:                     'summary_large_image',
+			twitterUrl:                      page.canonical,
+			twitterSite:                     config.siteName,
+			twitterCreator:                  null,
+			twitterTitle:                    true,
+			twitterDescription:              page.description,
+			twitterImage:                    config.image,
+			appleMobileWebAppCapable:        'yes',
+			appleMobileWebAppStatusBarStyle: null,
+			appleMobileWebAppTitle:          true,
+			applicationName:                 null,
+			themeColor:                      '#ffffff',
+			themeColorLight:                 null,
+			themeColorDark:                  null,
+			formatDetection: {
+				address:                     false,
+				date:                        false,
+				email:                       false,
+				telephone:                   false
+			},
+			googleTranslate:                 true,
+			robots:                          null, // noindex nofollow
+		}
+
+block content
+	include pages/gallery.pug

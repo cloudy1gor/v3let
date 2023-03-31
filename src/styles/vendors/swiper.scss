@@ -1,0 +1,24 @@
+@use 'utils/forwards' as *;
+@use 'swiper/swiper-bundle.min.css';
+
+.swiper {
+	&-slide {
+	}
+
+	&-pagination {
+		&-bullet {
+			&-active {
+			}
+		}
+	}
+
+	&-button-prev,
+	&-button-next {
+	}
+
+	&-button-prev {
+	}
+
+	&-button-next {
+	}
+}

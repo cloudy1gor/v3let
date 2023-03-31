@@ -1,0 +1,20 @@
+@use 'core/variables';
+@use 'functions/convert';
+
+//? ### Arguments
+//	$propery:  {css property}
+//	$maxValue: {number}
+//	$minValue: {number}
+
+@mixin adaptive($property, $maxValue, $minValue) {
+	$addValue: $maxValue - $minValue;
+	$minValue: #{$minValue + px};
+
+	#{$property}: convert.rem($maxValue);
+
+	@media (max-width: #{convert.em(variables.$container)}) {
+		#{$property}: calc(
+			$minValue + $addValue * ((100vw - 320px) / #{variables.$container - 320})
+		);
+	}
+}

@@ -1,0 +1,41 @@
+.header-top
+	.container
+		.header-top__inner
+			img.star(src='assets/images/star.webp' alt='Орден' style='width: 50px; height: 50px')
+			p.header-top__content
+				| [ХВВАУЛ-74] Харьковское Высшее Военное Авиационное ордена Красной Звезды Училище Лётчиков ВВС им. дважды Героя Советского Союза С.И. Грицевца
+.container
+	.header__inner
+		.header__about(data-aos='fade-left' data-aos-duration='1000')
+			h1.header__title
+				a.header__link(href='/') Взлёт
+			span.header__subtitle  Сайт выпускников 1974 года
+		nav.menu
+			ul.menu__list
+				li.menu__item
+					svg.menu__pic
+						use(xlink:href='assets/images/sprite.svg#users')
+					a.menu__link(href='./index.html#slide') Наш курс
+				li.menu__item
+					svg.menu__pic
+						use(xlink:href='assets/images/sprite.svg#history')
+					a.menu__link(href='./history.html') Исторические хроники
+				li.menu__item
+					svg.menu__pic
+						use(xlink:href='assets/images/sprite.svg#art')
+					a.menu__link(href='./art.html') Творчество
+				li.menu__item.menu__item-drop
+					svg.menu__pic
+						use(xlink:href='assets/images/sprite.svg#author')
+					a.menu__link(href='./art.html') Юрий Фёдоров
+					ul.dropdown-menu
+						li.menu-item
+							a(href='#') Зарницы памяти. Записки курсанта лётного училища.
+				li.menu__item
+					svg.menu__pic
+						use(xlink:href='assets/images/sprite.svg#help')
+					a.menu__link(href='#' data-modal='data-modal') Помощь
+			button.menu__btn(aria-expanded="false")
+				span
+				//- svg.menu__icon
+				//- 	use(xlink:href='assets/images/sprite.svg#menu')

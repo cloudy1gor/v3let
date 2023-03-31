@@ -1,4 +1,4 @@
-## v3let.pw - Сайт выпускников 1974 года.
+## v3let.de - Сайт выпускников 1974 года.
 ![](/screens/screen.png)</br>
 ![](/screens/screen2.png)</br>
 ![](/screens/screen3.png)</br>

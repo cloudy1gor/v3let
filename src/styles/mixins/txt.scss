@@ -1,0 +1,11 @@
+@mixin row($lc: 3) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -moz-box;
+	-moz-box-orient: vertical;
+	display: -webkit-box;
+	-webkit-line-clamp: $lc;
+	-webkit-box-orient: vertical;
+	line-clamp: $lc;
+	box-orient: vertical;
+  }

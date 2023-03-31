@@ -1,0 +1,17 @@
+mixin btn(data)
+	-
+		let modsArray = '';
+
+		if(data.mods) {
+			const modsList = data.mods.split(',');
+
+			for (let i = 0; i < modsList.length; i++) {
+				modsArray = `${modsArray} btn__${modsList[i].trim()}`;
+			}
+		}
+
+		const tag  =  data.link ? 'a' : 'button';
+		const link =  data.link ? data.link : null;
+		const type = !data.link ? data.type || 'button' : null;
+
+	#{tag}(class=modsArray, href=link, type=type)&attributes(attributes)= data.text

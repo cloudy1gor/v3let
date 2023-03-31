@@ -1,0 +1,44 @@
+//- Config & mixin
+include ../core/config.pug
+include ../mixins/**/*.pug
+
+block settings
+
+doctype html
+html(lang=page.lang)
+	head
+		include ../core/head.pug
+		block styles
+
+	body.body
+		.wrapper
+			if page.header
+				header.header
+					-
+						let tag;
+						page.id !== 0 ? (tag = `a href='${page.canonical}'`) : (tag = 'div');
+
+					block header
+						include ../parts/header.pug
+
+			main.main
+				.container
+					if page.bar
+						include ../parts/bar.pug
+
+					block content
+
+					if page.modal
+						include ../parts/modal.pug
+
+					if page.upBtn
+						include ../parts/upBtn.pug
+
+		if page.footer
+			footer.footer(role='contentinfo')
+				.container
+					block footer
+						include ../parts/footer.pug
+
+				block scripts
+					script(src='assets/js/app.min.js')

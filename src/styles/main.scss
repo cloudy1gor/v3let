@@ -1,0 +1,31 @@
+@use '../../node_modules/normalize-css/normalize.css' as *;
+@use "../../node_modules/aos/src/sass/aos.scss";
+//? ### Vendors
+@use 'vendors/embla';
+
+//? ### Core
+@use 'core/fonts';
+@use 'core/reset';
+@use 'core/helpers';
+@use 'core/global';
+@use 'core/typography';
+@use 'core/switcher-theme';
+
+//? ### Parts
+@use 'parts/header';
+@use 'parts/bar';
+@use 'parts/content';
+@use 'parts/news';
+@use 'parts/footer';
+
+//? ### Components
+// @use 'components/btn';
+@use 'components/modal';
+@use 'components/slider';
+@use 'components/theme-btn';
+
+//? ### Pages
+@use 'pages/albums';
+@use 'pages/author';
+@use 'pages/gallery';
+@use 'pages/product';

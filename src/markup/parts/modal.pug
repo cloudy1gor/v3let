@@ -1,0 +1,39 @@
+//- +modal({ id: 'modal-1', scroll: true })
+//- 	.modal__header
+//- 		h2.modal__title Modal title
+
+//- 	.modal__body
+//- 		p ...
+
+//- 	.modal__footer
+
+.modal.hide
+	.modal__dialog
+		.modal__content
+			span.modal__title Контактная информация!
+			.modal__body
+				span.modal__subtitle Для связи:
+				ul.social__list
+					li.social__item
+						a.social__link(href='https://ok.ru/profile/529378520930' target='_blank')
+							svg.social__icon
+								use(xlink:href='images/sprite.svg#odnok')
+					li.social__item
+						a.social__link(href='https://telegram.me/v3letRu' target='_blank')
+							svg.social__icon
+								use(xlink:href='images/sprite.svg#telegram')
+					li.social__item
+						a.social__link(href='mailto:admin@v3let.ru')
+							svg.social__icon
+								use(xlink:href='images/sprite.svg#email')
+			.modal__text
+				p
+					| Если что-то не получилось открыть, если у Вас есть хороший материал или интересные фото для публикации, информация для наших читателей, если появились вопросы, пишите нам на адресса электроной почты, указаные ниже. Здесь Вы получите ответ на Ваши вопросы и будет рассмотрена Ваша информация!
+				br
+			address(modal__address='')
+				span Связь с администрацией:
+				a.modal__mail(href='mailto:v3letz@gmail.com') v3letz@gmail.com
+				a.modal__mail(href='mailto:v3let@mail.ru') v3let@mail.ru
+			.modal__inner
+				.modal__person
+					.modal__close(data-close='') &times;
