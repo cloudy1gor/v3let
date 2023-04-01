@@ -8,6 +8,9 @@
 	padding: rem(25);
 	border-radius: rem(12);
 	background-color: #fff;
+	@include media.max(sm) {
+		padding: rem(20) rem(5) rem(20);
+	  }
 
 	&__inner {
 	  display: grid;

@@ -1,4 +1,5 @@
 @use 'utils/forwards' as *;
+@use 'mixins/media';
 
 .theme {
 	display: flex;
@@ -11,6 +12,9 @@
 	background-color: #e5f4f3;
 	border: rem(3) solid #000;
 	border-radius: 50%;
+	@include media.max(lg) {
+		right: rem(2);
+	}
 
 	&__icon {
 	  width: rem(26);

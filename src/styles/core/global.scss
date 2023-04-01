@@ -70,6 +70,10 @@ input:-webkit-autofill {
 	margin: 0 auto;
 	padding: 0 rem(15);
 	max-width: rem(1300);
+
+	@include media.max(md) {
+		padding: 0 rem(5);
+	}
 }
 
 img {
@@ -97,6 +101,9 @@ img {
 	transition: color 0.3s;
 	cursor: pointer;
 	@include txt.row($lc: 2);
+	@include media.max(md){
+		margin-left: rem(10);
+	}
 
 	&:hover {
 		color: $accent;
@@ -215,6 +222,9 @@ strong {
 	text-align: center;
 	line-height: rem(32);
 	cursor: pointer;
+	@include media.max(lg) {
+		right: rem(10);
+	}
 
 	&__txt {
 		position: absolute;
@@ -341,11 +351,12 @@ strong {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 14px;
+	min-height: rem(30);
+	font-size: rem(14);
 	color: #999;
 
 	@include media.max(sm) {
-		font-size: 10px;
+		font-size: rem(12);
 	}
 
 	&__icon {

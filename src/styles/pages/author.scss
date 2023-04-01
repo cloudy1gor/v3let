@@ -12,6 +12,9 @@
 		padding: rem(25);
 		border-radius: rem(12) rem(12) 0 0;
 		background-color: #fff;
+		@include media.max(md) {
+			padding-top: rem(20);
+		}
 	}
 
 	&__top {
@@ -186,7 +189,7 @@
 		justify-content: center;
 		// flex-wrap: wrap;
 		flex-direction: column;
-		margin: rem(15) rem(20);
+		margin: rem(15) rem(20) 0;
 		border-radius: rem(8);
 		// list-style: square;
 		padding: 0 0 rem(30) rem(8);
