@@ -42,9 +42,10 @@
     table {
       max-width: 100%;
       border: none;
+	  border-collapse: collapse;
       margin-bottom: 0 auto rem(20) !important;
       border-collapse: collapse;
-      table-layout: fixed;
+      table-layout: auto;
 
       & tbody td {
         padding: rem(2)!important;
